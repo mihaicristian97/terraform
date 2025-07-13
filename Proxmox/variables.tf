@@ -10,8 +10,8 @@ variable "vm_password" {
     sensitive   = true
 }
 
-variable "the_gateway" {
-    description = "The IP address of the gateway for VM and LXC containers"
+variable "lxc_gateway" {
+    description = "The IP address of the gateway for LXC containers"
     type        = string
 }
 
