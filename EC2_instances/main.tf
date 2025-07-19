@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "instance1" {
-  ami = "ami-020cba7c55df1f615"   # Ubuntu 24.04
+  ami = var.ubuntu_ami   # Using the variable defined in variables.tf
   instance_type = "t3.micro"
 
   tags = {
@@ -12,7 +12,7 @@ resource "aws_instance" "instance1" {
 }
 
 resource "aws_instance" "instance2" {
-  ami = "ami-020cba7c55df1f615"   # Ubuntu 24.04
+  ami = var.ubuntu_ami
   instance_type = "t3.micro"
 
   tags = {
